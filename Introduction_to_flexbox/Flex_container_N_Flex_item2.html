@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        border: 4px solid green;
+        background-color: lightgreen;
+        display: flex;
+        padding: 16px;
+        flex-direction: column;
+        height: 80vh;
+      }
+
+      .parent {
+        border: 4px solid blue;
+        flex: 1;
+        margin: 8px;
+        height: 100px;
+      }
+
+      .container .first {
+        background-color: lightblue;
+        display: flex;
+        padding: 26px;
+        justify-content: space-between;
+      }
+
+      .first .grand {
+        background-color: lightgoldenrodyellow;
+        border: 4px solid salmon;
+        flex: 1;
+      }
+
+      #child {
+        background-color: aqua;
+        display: flex;
+        padding: 8px;
+      }
+
+      #child .grandchild-one {
+        flex: 1;
+        background-color: palevioletred;
+        border: 4px solid lightpink;
+      }
+
+      #child .grandchild-two {
+        flex: 1;
+        background-color: palevioletred;
+        border: 4px solid lightpink;
+      }
+
+      .third {
+        display: flex;
+        padding: 8px;
+      }
+
+      .third .grand {
+        line-height: 80px;
+        border: 4px solid lightskyblue;
+        flex: 2;
+        margin: 4px;
+        background-color: plum;
+      }
+
+      .third .child-two,
+      .third .child-three {
+        flex: 1;
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="first parent">
+        <div class="grand child-one"></div>
+        <div class="grand child-two" id="child">
+          <div class="great grandchild-one"></div>
+          <div class="great grandchild-two"></div>
+        </div>
+        <div class="grand child-three"></div>
+      </div>
+      <div class="second parent"></div>
+      <div class="third parent">
+        <div class="grand child-one"></div>
+        <div class="grand child-two"></div>
+        <div class="grand child-three"></div>
+        <div class="grand child-four"></div>
+      </div>
+    </div>
+  </body>
+</html>
